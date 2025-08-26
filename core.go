@@ -127,7 +127,8 @@ func CreateBackupBytes(passphrase, sessionKey string, sleepMilliseconds int) ([]
 
 	var b bytes.Buffer
 	writer := bufio.NewWriter(&b)
-	err = archiver.Zip.Write(writer, []string{BackupFolderName})
+	zipper := archiver.Zip{} // create an instance
+	err = zipper.Write(writer, []string{BackupFolderName})
 	if err != nil {
 		return nil, err
 	}
