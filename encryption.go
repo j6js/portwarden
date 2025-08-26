@@ -16,6 +16,7 @@ import (
 const (
 	ErrMessageAuthenticationFailed = "cipher: message authentication failed"
 	ErrWrongBackupPassphrase       = "wrong backup passphrase entered"
+	Salt                           = "mAP3FGlH2LhALdHlQiyhvKvQL3dnZOg6ej5vfW9u1YIVBeBmyJ1WGRtIwus9X1QW"
 )
 
 // derive a key from the master password
